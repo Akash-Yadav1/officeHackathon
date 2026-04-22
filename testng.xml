@@ -3,8 +3,8 @@
 <suite name="Hackathon">
     <test verbose="2" preserve-order="true" name="CabBooking">
         <classes>
-            <class name="tests.cabBookingTest"/>
-            <class name="tests.giftBookingTest"/>
+            <class name="tests.CabBookingTest"/>
+            <class name="tests.GiftBookingTest"/>
         </classes>
     </test>
 </suite>

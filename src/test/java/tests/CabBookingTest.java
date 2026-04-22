@@ -1,14 +1,11 @@
 package tests;
 
-import org.openqa.selenium.WebDriver;
-import base.base;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import base.Base;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.CabBookingPages;
 
-import java.time.Duration;
-
-public class cabBookingTest extends base{
+public class CabBookingTest extends Base {
 
     @Test
     public void bookSUVCab() throws InterruptedException {
@@ -31,6 +28,7 @@ public class cabBookingTest extends base{
 
         String cost=cab.lowestCost();
         System.out.println("Lowest cost="+cost);
+        Assert.assertNotNull(cost);
 
     }
 

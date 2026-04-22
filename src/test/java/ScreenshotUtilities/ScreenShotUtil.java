@@ -10,12 +10,13 @@ import java.io.IOException;
 
 public class ScreenShotUtil {
 
-    public static void captureShot(WebDriver driver) throws IOException {
+    public static boolean captureShot(WebDriver driver) throws IOException {
         TakesScreenshot screenshot=(TakesScreenshot) driver;
         File src=screenshot.getScreenshotAs(OutputType.FILE);
         File dest=new File(System.getProperty("user.dir")+"//Screenshot//screenshot.png");
 
         FileHandler.copy(src,dest);
+        return true;
     }
 
 }

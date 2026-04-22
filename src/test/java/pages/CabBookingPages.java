@@ -58,7 +58,7 @@ public class CabBookingPages {
     public void fromCitySelect(String city) {
         fromInp.click();
         fromInp.sendKeys(city);
-        driver.findElement(By.xpath("//div[@role='option'][contains(normalize-space(),'" + city + "')]")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='option'][contains(normalize-space(),'" + city + "')]"))).click();
     }
 
     public void toCitySelect(String city) throws InterruptedException {
@@ -66,7 +66,7 @@ public class CabBookingPages {
         toInp.click();
         Thread.sleep(3000);
         toInp.sendKeys(city);
-        driver.findElement(By.xpath("//div[@role='option'][contains(normalize-space(),'" + city + "')]")).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@role='option'][contains(normalize-space(),'" + city + "')]"))).click();
     }
 
     public void timeSelect(String time) {
