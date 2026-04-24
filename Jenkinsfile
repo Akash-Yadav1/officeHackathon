@@ -11,7 +11,7 @@ pipeline {
 
         stage('Run TestNG Tests') {
             steps {
-                sh 'mvn clean test'
+                bat 'mvn clean test'
             }
         }
     }
